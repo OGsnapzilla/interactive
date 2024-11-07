@@ -4,8 +4,41 @@
   padding: 0;
 }
 
+/* Styling af baggrunden*/
+.baggrundsBillede {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
 
+/*Styling og placering af video*/
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -35rem;
+}
 
+/*Styling af knap*/
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ECE8E5;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.133);
+  position: absolute;
+  margin: -3.5rem 0 0 43rem;
+  border-style: none;
+  color: black;
+  outline: none;
+}
 
 
 
