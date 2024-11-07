@@ -3,8 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/index.js" defer></script>
+    <title>Interactive Timeline</title>
+    <link rel="stylesheet" href="css/timeline.css">
+    <script src="js/timelinejs.js" defer></script>
 </head>
-<body></body>
+<body>
+    <main>
+        <!-- Background image that stretches horizontally -->
+        <section id="timelineBackground">
+            <img src="img/baggrund.webp" alt="Timeline Background" class="background-image">
+        </section>
+
+        <!-- Animated girl container -->
+        <section class="animated-girl">
+            <img id="walking" src="img/walkingGirl.gif" alt="Walking Girl" class="girl-image">
+            <img id="standing" src="img/stillGirl.webp" alt="Standing Girl" class="girl-image hidden">
+        </section>
+    </main>
+</body>
+</html>

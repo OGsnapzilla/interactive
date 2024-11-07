@@ -1,0 +1,54 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full viewport height for the main scroll area */
+body, main {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Horizontal scroll area setup */
+main {
+    width: 300vw; /* Stretch to 3 times the viewport width for scrolling */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    position: relative;
+}
+
+/* Timeline background styling */
+#timelineBackground {
+    position: absolute;
+    width: 300vw; /* Matches the scrollable width */
+    height: 100vh;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.background-image {
+    width: 100%; /* Fill the section horizontally */
+    height: 100%; /* Fill the section vertically */
+    object-fit: cover;
+}
+
+/* Animated girl styling */
+.animated-girl {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    left: 0;
+    pointer-events: none; /* Prevent interaction */
+}
+
+/* Girl image styling */
+.girl-image {
+    width: 100px; /* Adjust size as needed */
+}
+
+.hidden {
+    display: none; /* Hide standing image while walking */
+}
