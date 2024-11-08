@@ -6,47 +6,48 @@
 }
 
 /* Full viewport height for the main scroll area */
-body, main {
+body, html {
     height: 100vh;
-    overflow-x: hidden;
+    overflow: hidden; /* Prevent vertical scrolling */
 }
 
-/* Horizontal scroll area setup */
 main {
-    width: 300vw; /* Stretch to 3 times the viewport width for scrolling */
+    width: 14260px; /* Match the background image width for full scrolling */
+    height: 100%;
+    overflow-x: scroll;
     display: flex;
-    align-items: center; /* Center content vertically */
+    align-items: center;
     position: relative;
 }
 
 /* Timeline background styling */
 #timelineBackground {
     position: absolute;
-    width: 300vw; /* Matches the scrollable width */
-    height: 100vh;
+    width: 14260px; /* Match the image width */
+    height: 100vh; /* Full viewport height */
     top: 0;
     left: 0;
     overflow: hidden;
 }
 
 .background-image {
-    width: 100%; /* Fill the section horizontally */
+    width: 14260px; /* Scale to fill horizontally */
     height: 100%; /* Fill the section vertically */
-    object-fit: cover;
+    object-fit: cover; /* Maintain image aspect ratio */
 }
 
 /* Animated girl styling */
 .animated-girl {
     position: absolute;
-    top: 50%; /* Center vertically */
+    top: 70%; /* Center vertically */
     transform: translateY(-50%);
-    left: 0;
+    left: 50px; /* Initial position offset */
     pointer-events: none; /* Prevent interaction */
 }
 
 /* Girl image styling */
 .girl-image {
-    width: 100px; /* Adjust size as needed */
+    width: 200px; /* Adjust size as needed */
 }
 
 .hidden {

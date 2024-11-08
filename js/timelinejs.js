@@ -2,15 +2,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const walkingGirl = document.getElementById("walking");
     const standingGirl = document.getElementById("standing");
     const animatedGirl = document.querySelector(".animated-girl");
+    const main = document.querySelector("main");
 
     let lastScrollLeft = 0; // Track last scroll position
     let isScrolling;
 
     // Function to handle girl's position on scroll
     function scrollHandler() {
-        const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+        const scrollLeft = main.scrollLeft;
 
-        // Update girl's horizontal position
+        // Update girl's horizontal position relative to main's scrollLeft
         animatedGirl.style.left = `${scrollLeft + 50}px`; // Adjust horizontal position with offset if needed
 
         // Check if scrolling direction changed
@@ -32,6 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
         lastScrollLeft = scrollLeft;
     }
 
-    // Listen to the scroll event
-    window.addEventListener("scroll", scrollHandler, { passive: true });
+    // Listen to the scroll event on the main container
+    main.addEventListener("scroll", scrollHandler, { passive: true });
 });
