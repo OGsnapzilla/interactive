@@ -12,7 +12,7 @@ body, html {
 }
 
 main {
-    width: 14260px; /* Match baggrund vidde */
+    width: auto; /* Match baggrund vidde */
     height: 100%;
     overflow-x: scroll;
     display: flex;
@@ -23,7 +23,7 @@ main {
 /* Timeline baggrund styling */
 #timelineBackground {
     position: absolute;
-    width: 170000px; 
+    width: 15707px; 
     height: 100vh; 
     top: 0;
     left: 0;
@@ -31,7 +31,7 @@ main {
 }
 
 .background-image {
-    width: 14260px; 
+    width: 15707px; 
     height: 100%; 
     object-fit: cover; 
 }
@@ -39,7 +39,7 @@ main {
 /* Timeline forgrund styling */
 #timelineForgrund {
     position: absolute;
-    width: 170000px;
+    width: 15707px;
     height: 100vh; 
     top: 0;
     left: 0;
@@ -47,7 +47,7 @@ main {
 }
 
 .forgrund-image {
-    width: 14260px;
+    width: 15707px;
     height: 100%;
     object-fit: cover; 
 }

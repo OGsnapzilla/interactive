@@ -35,4 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Listen to the scroll event on the main container
     main.addEventListener("scroll", scrollHandler, { passive: true });
+
+    // Ensure the animated girl scrolls horizontally without exceeding the main container
+    animatedGirl.style.left = `${Math.min(scrollLeft + 50, 15707 - animatedGirl.offsetWidth)}px`;
 });
