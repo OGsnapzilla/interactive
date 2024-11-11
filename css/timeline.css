@@ -5,14 +5,14 @@
     box-sizing: border-box;
 }
 
-/* Full viewport height for the main scroll area */
+/* Viewport højde for main */
 body, html {
     height: 100vh;
-    overflow: hidden; /* Prevent vertical scrolling */
+    overflow: hidden; /* Ingen vertikal scrolling */
 }
 
 main {
-    width: 14260px; /* Match the background image width for full scrolling */
+    width: 14260px; /* Match baggrund vidde */
     height: 100%;
     overflow-x: scroll;
     display: flex;
@@ -20,53 +20,53 @@ main {
     position: relative;
 }
 
-/* Timeline background styling */
+/* Timeline baggrund styling */
 #timelineBackground {
     position: absolute;
-    width: 170000px; /* Match the image width */
-    height: 100vh; /* Full viewport height */
+    width: 170000px; 
+    height: 100vh; 
     top: 0;
     left: 0;
     overflow: hidden;
 }
 
 .background-image {
-    width: 14260px; /* Scale to fill horizontally */
-    height: 100%; /* Fill the section vertically */
-    object-fit: cover; /* Maintain image aspect ratio */
+    width: 14260px; 
+    height: 100%; 
+    object-fit: cover; 
 }
 
-/* Timeline forgrud styling */
+/* Timeline forgrund styling */
 #timelineForgrund {
     position: absolute;
-    width: 170000px; /* Match the image width */
-    height: 100vh; /* Full viewport height */
+    width: 170000px;
+    height: 100vh; 
     top: 0;
     left: 0;
     overflow: hidden;
 }
 
 .forgrund-image {
-    width: 14260px; /* Scale to fill horizontally */
-    height: 100%; /* Fill the section vertically */
-    object-fit: cover; /* Maintain image aspect ratio */
+    width: 14260px;
+    height: 100%;
+    object-fit: cover; 
 }
 
 /* Animated girl styling */
 .animated-girl {
     position: absolute;
-    top: 70%; /* Center vertically */
+    top: 70%; 
     transform: translateY(-50%);
-    left: 50px; /* Initial position offset */
-    pointer-events: none; /* Prevent interaction */
+    left: 50px; 
+    pointer-events: none; 
 }
 
 /* Girl image styling */
 .girl-image {
-    width: 200px; /* Adjust size as needed */
+    width: 200px; 
     margin-left: 300px;
 }
 
 .hidden {
-    display: none; /* Hide standing image while walking */
+    display: none; /* Gem stillestående billede når hun går */
 }
