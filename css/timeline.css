@@ -69,7 +69,7 @@ main {
 
 .hidden {
 
-    display: none;
+    display: none;/* Hide standing image while walking */
 }
 
 
@@ -94,7 +94,4 @@ main {
 
 #audio-btn:hover{
     background-color: #ece0d8;
-
-    display: none; /* Hide standing image while walking */
-
 }
