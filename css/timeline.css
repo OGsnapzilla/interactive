@@ -1,51 +1,74 @@
-/* Reset and container styles */
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Full viewport height for the main scroll area */
 body, html {
     height: 100vh;
     overflow: hidden; /* Prevent vertical scrolling */
 }
 
 main {
-    width: 14260px; /* Full scroll width */
+    width: 14260px; /* Match the background image width for full scrolling */
     height: 100%;
     overflow-x: scroll;
-    display: flex; /* Flex for inline child alignment */
+    display: flex;
+    align-items: center;
     position: relative;
 }
 
 /* Timeline background styling */
-#timelineBackground, #timelineForgrund {
-    width: 100%; /* Full width to fill main container */
+#timelineBackground {
+    position: absolute;
+    width: 170000px; /* Match the image width */
     height: 100vh; /* Full viewport height */
+    top: 0;
+    left: 0;
     overflow: hidden;
 }
 
-.background-image, .forgrund-image {
-    width: 100%; /* Stretch to fill container */
-    height: 100%; /* Maintain full height */
-    object-fit: contain; /* Ensure no cropping */
+.background-image {
+    width: 14260px; /* Scale to fill horizontally */
+    height: 100%; /* Fill the section vertically */
+    object-fit: cover; /* Maintain image aspect ratio */
+}
+
+/* Timeline forgrud styling */
+#timelineForgrund {
+    position: absolute;
+    width: 170000px; /* Match the image width */
+    height: 100vh; /* Full viewport height */
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.forgrund-image {
+    width: 14260px; /* Scale to fill horizontally */
+    height: 100%; /* Fill the section vertically */
+    object-fit: cover; /* Maintain image aspect ratio */
 }
 
 /* Animated girl styling */
 .animated-girl {
     position: absolute;
-    top: 70%; /* Adjust as needed */
+    top: 70%; /* Center vertically */
     transform: translateY(-50%);
-    left: 50px; /* Adjust initial position */
-    pointer-events: none;
+    left: 50px; /* Initial position offset */
+    pointer-events: none; /* Prevent interaction */
 }
 
+/* Girl image styling */
 .girl-image {
     width: 200px; /* Adjust size as needed */
     margin-left: 300px;
 }
 
 .hidden {
+
     display: none;
 }
 
@@ -71,4 +94,7 @@ main {
 
 #audio-btn:hover{
     background-color: #ece0d8;
+
+    display: none; /* Hide standing image while walking */
+
 }
