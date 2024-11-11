@@ -68,5 +68,30 @@ main {
 }
 
 .hidden {
-    display: none; /* Hide standing image while walking */
+
+    display: none;/* Hide standing image while walking */
+}
+
+
+
+#audio-btn{
+    position: fixed;
+    top: 1rem;
+    left: 98rem;
+    background-color: #ECE8E5;
+    border-radius: 20px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.133);
+
+    color: black;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.133);
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#audio-btn:hover{
+    background-color: #ece0d8;
 }
