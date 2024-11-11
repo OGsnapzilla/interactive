@@ -23,7 +23,7 @@ main {
 /* Timeline background styling */
 #timelineBackground {
     position: absolute;
-    width: 14260px; /* Match the image width */
+    width: 170000px; /* Match the image width */
     height: 100vh; /* Full viewport height */
     top: 0;
     left: 0;
@@ -31,6 +31,22 @@ main {
 }
 
 .background-image {
+    width: 14260px; /* Scale to fill horizontally */
+    height: 100%; /* Fill the section vertically */
+    object-fit: cover; /* Maintain image aspect ratio */
+}
+
+/* Timeline forgrud styling */
+#timelineForgrund {
+    position: absolute;
+    width: 170000px; /* Match the image width */
+    height: 100vh; /* Full viewport height */
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.forgrund-image {
     width: 14260px; /* Scale to fill horizontally */
     height: 100%; /* Fill the section vertically */
     object-fit: cover; /* Maintain image aspect ratio */
@@ -48,6 +64,7 @@ main {
 /* Girl image styling */
 .girl-image {
     width: 200px; /* Adjust size as needed */
+    margin-left: 300px;
 }
 
 .hidden {

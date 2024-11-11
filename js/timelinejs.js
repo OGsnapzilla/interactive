@@ -4,26 +4,26 @@ document.addEventListener("DOMContentLoaded", function () {
     const animatedGirl = document.querySelector(".animated-girl");
     const main = document.querySelector("main");
 
-    let lastScrollLeft = 0; // Track last scroll position
+    let lastScrollLeft = 0; // Den sidste scroll position
     let isScrolling;
 
-    // Function to handle girl's position on scroll
+    // Håndterer animationens position
     function scrollHandler() {
         const scrollLeft = main.scrollLeft;
 
-        // Update girl's horizontal position relative to main's scrollLeft
-        animatedGirl.style.left = `${scrollLeft + 50}px`; // Adjust horizontal position with offset if needed
+        // Opdaterer animationens position relativ med scrollLeft i main'en 
+        animatedGirl.style.left = `${scrollLeft + 50}px`; 
 
-        // Check if scrolling direction changed
+        // Tjekker om scroll positionen er ændret
         if (scrollLeft !== lastScrollLeft) {
-            // Show walking animation while scrolling
+            
+            // Viser pigen som går når man scroller
             walkingGirl.classList.remove("hidden");
             standingGirl.classList.add("hidden");
 
-            // Clear previous scrolling timeout
             clearTimeout(isScrolling);
-
-            // Set timeout to switch to standing after scrolling stops
+ 
+            // Sæt timeout til at stå stille når man ikke scroller
             isScrolling = setTimeout(() => {
                 walkingGirl.classList.add("hidden");
                 standingGirl.classList.remove("hidden");
