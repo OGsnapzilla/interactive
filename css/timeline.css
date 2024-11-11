@@ -1,72 +1,50 @@
-/* Basic Reset */
+/* Reset and container styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Full viewport height for the main scroll area */
 body, html {
     height: 100vh;
     overflow: hidden; /* Prevent vertical scrolling */
 }
 
 main {
-    width: 14260px; /* Match the background image width for full scrolling */
+    width: 14260px; /* Full scroll width */
     height: 100%;
     overflow-x: scroll;
-    display: flex;
-    align-items: center;
+    display: flex; /* Flex for inline child alignment */
     position: relative;
 }
 
 /* Timeline background styling */
-#timelineBackground {
-    position: absolute;
-    width: 170000px; /* Match the image width */
+#timelineBackground, #timelineForgrund {
+    width: 100%; /* Full width to fill main container */
     height: 100vh; /* Full viewport height */
-    top: 0;
-    left: 0;
     overflow: hidden;
 }
 
-.background-image {
-    width: 14260px; /* Scale to fill horizontally */
-    height: 100%; /* Fill the section vertically */
-    object-fit: cover; /* Maintain image aspect ratio */
-}
-
-/* Timeline forgrud styling */
-#timelineForgrund {
-    position: absolute;
-    width: 170000px; /* Match the image width */
-    height: 100vh; /* Full viewport height */
-    top: 0;
-    left: 0;
-    overflow: hidden;
-}
-
-.forgrund-image {
-    width: 14260px; /* Scale to fill horizontally */
-    height: 100%; /* Fill the section vertically */
-    object-fit: cover; /* Maintain image aspect ratio */
+.background-image, .forgrund-image {
+    width: 100%; /* Stretch to fill container */
+    height: 100%; /* Maintain full height */
+    object-fit: contain; /* Ensure no cropping */
 }
 
 /* Animated girl styling */
 .animated-girl {
     position: absolute;
-    top: 70%; /* Center vertically */
+    top: 70%; /* Adjust as needed */
     transform: translateY(-50%);
-    left: 50px; /* Initial position offset */
-    pointer-events: none; /* Prevent interaction */
+    left: 50px; /* Adjust initial position */
+    pointer-events: none;
 }
 
-/* Girl image styling */
 .girl-image {
     width: 200px; /* Adjust size as needed */
     margin-left: 300px;
 }
 
 .hidden {
-    display: none; /* Hide standing image while walking */
+    display: none;
 }

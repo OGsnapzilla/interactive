@@ -9,21 +9,28 @@
 </head>
 <body>
     <main>
-        <!-- Background image that stretches horizontally -->
-        <section id="timelineBackground">
-            <img src="img/baggrund.webp" alt="Timeline Background" class="background-image">
+            <!-- Background image section (now inline, without absolute positioning) -->
+    <section id="timelineBackground">
+        <img src="img/baggrund.webp" alt="Timeline Background" class="background-image">
+    </section>
+
+    <!-- Animated girl container (absolute positioning to float over images) -->
+    <section class="animated-girl">
+        <img id="walking" src="img/walkingGirl.gif" alt="Walking Girl" class="girl-image">
+        <img id="standing" src="img/stillGirl.webp" alt="Standing Girl" class="girl-image hidden">
+    </section>
+
+    <!-- Foreground image section (also inline) -->
+    <section id="timelineForgrund">
+        <img src="img/forgrund.webp" alt="Timeline Foreground" class="forgrund-image">
+    </section>
+
+        <!--Inserting sound with a button to turnoff-->
+        <section>
+        <audio src="audio/Pufino - Enlivening (freetouse.com).mp3"></audio>
         </section>
 
-        <!-- Animated girl container -->
-        <section class="animated-girl">
-            <img id="walking" src="img/walkingGirl.gif" alt="Walking Girl" class="girl-image">
-            <img id="standing" src="img/stillGirl.webp" alt="Standing Girl" class="girl-image hidden">
-        </section>
 
-        <!-- Forgrund image that stretches horizontally -->
-        <section id="timelineForgrund">
-            <img src="img/forgrund.webp" alt="Timeline FOrgrund" class="forgrund-image">
-        </section>
     </main>
 </body>
 </html>
