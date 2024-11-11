@@ -6,6 +6,7 @@
     <title>Interactive Timeline</title>
     <link rel="stylesheet" href="css/timeline.css">
     <script src="js/timelinejs.js" defer></script>
+    <script src="js/audio.js" defer></script>
 </head>
 <body>
     <main>
@@ -26,16 +27,12 @@
         <img src="img/forgrund.webp" alt="Timeline Foreground" class="forgrund-image">
     </section>
 
-        <!--Inserting sound with a button to turnoff-->
-        <section>
-        <audio src="audio/Pufino - Enlivening (freetouse.com).mp3"></audio>
-        </section>
+    <!--Inserting sound with a button to turnoff-->
+    <section>
+        <audio id="audio" src="audio/Pufino - Enlivening (freetouse.com).mp3" autoplay loop></audio>
+        <button id="audio-btn">Sluk musik</button>
+    </section>
 
-        <section class="audio">
-            <audio autoplay loop class="timeline-audio">
-                <source src="audio/Pufino - Enlivening (freetouse.com).mp3" type="audio/mp3">
-            </audio>
-        </section>
     </main>
     
 </body>
