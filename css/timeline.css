@@ -196,7 +196,7 @@ main {
 /*styling pop-up*/
 
 #pop-up-question {
-    display: none;
+    display: none; /*skjuler popup*/
     position: absolute;
     left: 500px;
     background-color: #ece0d8;
@@ -212,6 +212,8 @@ main {
 
 .pop-up-information {
     border: 6px solid #000;
+    width: 550px;
+    height: 250px;
 }
 
 #pop-up-question p {
