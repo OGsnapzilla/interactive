@@ -9,17 +9,19 @@
 </head>
 <body>
     <main>
-        <!--Inserting backgroundphoto-->
-        <img class="baggrundsBillede" src="img/forside-ezgif.com-gif-to-webp-converter.webp">
+        <!-- Background image -->
+        <img class="baggrundsBillede" src="img/bgbilledebg.png">
 
-        <!--Making a button that goes to the timeline-->
+        <!-- Button linking to the timeline -->
         <a class="btn" href="timeline.html">UDFORSK</a>
 
-        <!--Inserting our video-->
+        <!-- Video with autoplay, loop, muted, and playsinline attributes -->
         <article class="video">
-            <video autoplay loop class="forside_video">
-                <source src="video/465403325_8525266150884986_2695509031772454370_n.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline class="forside_video" id="forsideVideo">
+                <source src="video/videotv.mp4" type="video/mp4">
             </video>
+            <!-- Sound toggle button -->
+            <button class="sound-toggle" id="soundToggle">Unmute</button>
         </article>
     </main>
 </body>

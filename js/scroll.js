@@ -1,3 +1,5 @@
+"use strict";
+
 document.addEventListener("DOMContentLoaded", function () {
     const main = document.querySelector("main");
     let targetScrollPosition = 0;

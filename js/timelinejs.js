@@ -1,3 +1,5 @@
+"use strict";
+
 document.addEventListener("DOMContentLoaded", function () {
     const walkingGirl = document.getElementById("walking");
     const standingGirl = document.getElementById("standing");
