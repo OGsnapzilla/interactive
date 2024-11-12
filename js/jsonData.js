@@ -4,7 +4,7 @@ const container = document.getElementById("container");
 let currentIndex = 0;
 
 const jsonData = [
-    { year; "25.000 f.kr - Venus fra Willendort", description: "Venus fra Willendorf-statue repræsentere et ældgammelt ideal om kvindekroppen med runde former. Det er en af de ældste kendte afbildninger af kvindekroppen"},
+    { year: "25.000 f.kr - Venus fra Willendort", description: "Venus fra Willendorf-statue repræsentere et ældgammelt ideal om kvindekroppen med runde former. Det er en af de ældste kendte afbildninger af kvindekroppen"},
 ]
 
 function createItem(item) {
