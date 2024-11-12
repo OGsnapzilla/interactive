@@ -115,6 +115,77 @@ Som nævnt repræsenterede item et element fra vores JSON-fil, year og descripti
 
 Til sidst returneres det oprettede og tilpassede div-element. 
 
+Efterfølgende opretter vi en ny funktion uden parametre:
+```javascript 
+function loadMoreContent (){
+    if (currentIndex < jsonData.lenght) {
+        const item = jsonData[currentIndex];
+        container.appendChild(createItem(item, currentIndex));
+        curentIndex++;
+    }
+}
+
+
+if (currentIndex < jsonData.length)
+```
+er en betingelse der kontrollere om currentIndex er mindre end længden af jsonData, altså om der stadig er flere objekter at hente fra jsonData. 
+Derfor bruger vi if statement, for at angive en kodeblok, som udføres, hvis en specifik betingelse er sand (https://w3schools.com/js/js_if_else.asp). 
+
+Det næste objekt hentes fra jsonData-arrayet ved hjælp af currentIndex. Variablen item repræsentere objekt tilsvarende det aktuelle indeks. 
+
+
+```javascript 
+container.appendChild(createItem(item, currentIndex));
+```
+gør flere ting:
+1. `(createItem(item, currentIndex)) kalder på funktionen fra tidligere på linje 22 i js-filen, 
+2.  og med DOM-manipulation, opretter et barn til 'container'-elementet fra HTMl-filen. 
+
+```javascript
+curentIndex++;
+```
+henter det næste objekt i JSON-arrayet. 
+
+### Funktion til at indlæse første sæt indhold, når siden åbnes
+
+```javascript
+function loadInitialContent() {
+    for (let i = 0; i < 17; i++) {
+        loadMoreContent();
+    }
+}
+```
+Vi har oprettet en funktion der indlæser det første sæt indhold, når vores side åbnes. 
+Funktionen gør: 
+1. Vi har skrevet en 'for'-løkke, som kører 17 gange, altså fra 0-16 = 17, fordi 0 tæller med. 
+2. Iterationerne kalder på 'loadMoreContent' funktionen
+Det betyder at når funktionen 'loadInitialContent' bliver kaldt på, indlæser den de første 17 elementer fra vores array i JSON-filen. 
+
+
+### Tilføjelse af event-listener for scrolling
+
+Vi har tilføjet en event listener til 'container' elementet, som lytter efter scroll-begivenheder. 
+
+Denne lytter sættes op ved hjælp af:
+```javascript 
+container.addEventListener('scroll', ()=>)
+```
+og som udløses hver gang der scrolles i containeren. 
+
+Vi har skrevet en betingelse inde i event listeneren:
+```javascript
+if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 300)
+```
+Betingelsen tjekker om brugeren har scrollet næsten til enden af containeren. De 300 er en slags buffer, der gør, at nyt indhold bliver indlæst kort før man når helt til enden. Det betyder at hvis brugeren er tæt på enden, altså hvis betingelsen er sand, så kaldes:
+```javascript
+loadMoreContent();
+```
+
+
+
+
+
+
 
 
 
