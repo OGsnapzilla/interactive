@@ -196,7 +196,7 @@ main {
 /*styling pop-up*/
 
 #pop-up-question {
-    display: none; /*skjuler popup*/
+    display:none; /*skjuler popup*/
     position: absolute;
     left: 500px;
     background-color: #ece0d8;
@@ -242,8 +242,8 @@ main {
 
 
 .close-btn-popup {
-    display: flex;
-    justify-content: flex-end;
+    border: none;
+    background-color: #ece0d8;
     padding-bottom: 10px;
     padding-right: 5px;
     font-weight: 800;
