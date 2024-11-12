@@ -18,9 +18,9 @@ async function fetchData() {
     }
 }
 
-function createItem(item) {
+function createItem(item, index) {
     const element = document.createElement('div');
-    element.className = 'item';
+    element.className = `item item-${index + 1}`; // Dynamisk klassetildeling baseret på indeks
     element.innerHTML = `<h2>${item.year}</h2><p>${item.description}</p>`;
     return element;
 }
@@ -28,7 +28,7 @@ function createItem(item) {
 function loadMoreContent() {
     if (currentIndex < jsonData.length) {
         const item = jsonData[currentIndex];
-        container.appendChild(createItem(item));
+        container.appendChild(createItem(item, currentIndex));
         currentIndex++;
     }
 }
