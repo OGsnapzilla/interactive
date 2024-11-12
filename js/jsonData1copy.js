@@ -7,7 +7,7 @@ let jsonData = []; // Vi initialiserer jsonData som en tom array
 // Funktion til at hente JSON-data dynamisk fra en ekstern fil
 async function fetchData() {
     try {
-        const response = await fetch('../JSON/kropsIdealer.json'); // Skift stien til din JSON-fil
+        const response = await fetch('../JSON/kropsIdealer.json');
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -18,9 +18,10 @@ async function fetchData() {
     }
 }
 
+//Laver funktion der opretter et div for hvert element i jsonData
 function createItem(item, index) {
-    const element = document.createElement('div');
-    element.className = `item item-${index + 1}`; // Dynamisk klassetildeling baseret på indeks
+    const element = document.createElement('div'); //Opretter div
+    element.className = `item item-${index + 1}`; //Tildeler klasser, item som er fælles og et tal
     element.innerHTML = `<h2>${item.year}</h2><p>${item.description}</p>`;
     return element;
 }

@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+/*Indsætter font*/
+@font-face {
+    font-family: 'Sour Gummy';
+    src: url(../fonts/Sour_Gummy/SourGummy-VariableFont_wdth\,wght.ttf);
+}
+body{
+    font-family: 'Sour Gummy';
+}
+
 /* Viewport højde for main */
 body, html {
     height: 100vh;
@@ -73,7 +82,7 @@ main {
 }
 
 
-
+/*Styling the audio btn*/
 #audio-btn{
     position: fixed;
     top: 1rem;
@@ -81,7 +90,6 @@ main {
     background-color: #ECE8E5;
     border-radius: 20px;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.133);
-
     color: black;
     padding: 0.5rem 1.5rem;
     font-size: 1rem;
@@ -91,7 +99,6 @@ main {
     cursor: pointer;
     z-index: 1000;
 }
-
 #audio-btn:hover{
     background-color: #ece0d8;
 }
@@ -112,7 +119,60 @@ main {
     background-color: f0f0f0;
     vertical-align: top;
     position: absolute;
-    margin-left: 35rem;
+    margin-left: 15rem;
     margin-top: -12rem;
 }
 
+/*Styling text from jsonData*/
+.item p {
+    white-space: pre-line;
+    line-height: 1.5;
+    width: 30rem;
+}
+.item-2{
+    margin-left: 90rem;
+    margin-top: -21rem;
+}
+.item-3{
+    margin-left: 195rem;
+    margin-top: -20rem;
+}
+.item-4{
+    margin-left: 286rem;
+    margin-top: -15rem;
+}.item-5{
+    margin-left: 303rem;
+    margin-top: 7rem;
+}.item-6{
+    margin-left: 368rem;
+}.item-7{
+    margin-left: 463rem;
+}.item-8{
+    margin-left: 475rem;
+    margin-top: -22rem;
+}.item-9{
+    visibility: hidden;
+}.item-10{
+    visibility: hidden;
+}.item-11{
+    margin-left: 573rem;
+    margin-top: -18rem;
+}.item-12{
+    margin-left: 653rem;
+    margin-top: -18rem;
+}.item-13{
+    margin-left: 733rem;
+    margin-top: -20rem;
+}.item-14{
+    margin-left: 769rem;
+    margin-top: -16rem;
+}.item-15{
+    margin-left: 837rem;
+    margin-top: -21rem;
+}.item-16{
+    margin-left: 878rem;
+    margin-top: -11rem;
+}.item-17{
+    margin-left: 925rem;
+    margin-top: 3rem;
+}
