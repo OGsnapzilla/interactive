@@ -39,3 +39,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Ensure the animated girl scrolls horizontally without exceeding the main container
     animatedGirl.style.left = `${Math.min(scrollLeft + 50, 15707 - animatedGirl.offsetWidth)}px`;
 });
+
+
+//popup open and close
+
+function togglePopip() {
+    const popup = document.getElementById("pop-up-question");
+    //endrer display
+    if (popup.style.display === "block") {
+        popup.style.display = "none";
+    } else {
+        popup.style.display = "block";
+    }
+};
