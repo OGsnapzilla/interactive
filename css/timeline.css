@@ -199,29 +199,6 @@ main {
 
 
 
-/*styling icon btn*/
-
-#information-icon {
-    position: absolute;
-    bottom: 350px; 
-    right: 700px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    width: 40px;
-
-}
-
-#pop-up-question.visible {
-    display: block;
-}
-
-.hidden {
-    display: none;
-}
-
 /*styling pop-up*/
 
 #pop-up-question {
@@ -230,14 +207,24 @@ main {
     left: 500px;
     background-color: #ece0d8;
     border: 15px solid #000;
-    width: 600px;
-    height: 300px;
+    width: 650px;
+    height: 350px;
     margin: 20px;
     max-width: 80%;
     padding: 10px;
     z-index: 2;
 }
 
+/*Gjør pop-up visible and hide*/
+#pop-up-question.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+/*styling the question button*/
 #open-btn {
     position: absolute;
     bottom: 350px; 
@@ -254,18 +241,21 @@ main {
     z-index: 1;
 }
 
+/*making second border*/
 .pop-up-information {
     border: 6px solid #000;
-    width: 550px;
-    height: 250px;
+    width: 600px;
+    height: 300px;
 }
 
+/*styling text in pop-up*/
 #pop-up-question p {
     padding-left: 30px;
     padding-top: 20px;
     font-size: large;
 }
 
+/*styling yes and no buttons*/
 .question-btn {
     background-color: #000;
     padding: 6px 40px;
@@ -275,20 +265,20 @@ main {
     margin-top: 40px;
     
 }
-
+/*placing yes and no buttons*/
 .question-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
     gap: 40px;
     
 }
 
+/*styling close button*/
 .close-btn-popup {
     border: none;
     background-color: #ece0d8;
-    padding-bottom: 10px;
-    padding-right: 5px;
     font-weight: 800;
     cursor: pointer;
 }
