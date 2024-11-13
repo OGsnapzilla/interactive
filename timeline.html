@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Timeline</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
     <link rel="stylesheet" href="css/timeline.css">
     <script src="js/timelinejs.js" defer></script>
     <script src="js/audio.js" defer></script>
     <script src="js/jsonData1copy.js" defer></script>
     <script src="js/scroll.js" defer></script>
     <script src="js/jsonData.js" defer></script>
-    <script src="js/chart.js" defer></script>
+    <script src="js/chartvotes.js" defer></script>
+    <link rel="stylesheet" href="css/chart.css">
 </head>
 <body>
     <main>
@@ -25,32 +27,36 @@
     <button id="open-btn">Spørsmål</button>
 
       <!--pop-up-->
-<<<<<<< Updated upstream
       <section id="pop-up-question" class="hidden">
-=======
- <!--
-      
-        <section class="stemme">
-            <p id="ja" onclick="countClick1(1)">Ja det ville jeg</p>
-            <p id="nej" onclick="countClick1(2)">Nej, det ville jeg</p>
-        </section>
-
-      
-        <section id="chartContainer">
-            <canvas id="myChart" width="1200" height="1200" style="display: block; box-sizing: border-box; height: 600px; width: 600px;"></canvas>
-        </section>
-    -->
-
-      <section id="pop-up-question">
->>>>>>> Stashed changes
         <div class="pop-up-information">
             <button id="close-btn-popup" class="close-btn-popup" >X</button>
-            <p>ville du fjerne øyebryn, øyevipper og plukket hårfeste for å være vakker?</p>
-
-            <div class="question-buttons">
-                <button class="question-btn">Ja</button>
-                <button class="question-btn">Nei</button>
-            </div>
+                
+<div class="chart-container">
+    <canvas id="chart"></canvas> <!-- <canvas id="chart" width="300" height="150"></canvas> -->
+  </div>
+  <form id="pollForm">
+    <div class="poll">
+      <div class="poll-heading">
+        <h3 class="poll-title">Kunne du finde på at fjerne dine øjenbryn, øjenvipper og hårgrænse hvis det blev anset som smukt? </h3>
+      </div>
+      <div class="poll-body">
+        <ul>
+          <li>
+            <label><input type="radio" name="pollOptions" value="Ja"><span>Ja</span></label>
+          </li>
+          <li>
+            <label><input type="radio" name="pollOptions" value="Nej"><span>Nej</span></label>
+          </li>
+          <li>
+            <label><input type="radio" name="pollOptions" value="Måske"><span>Måske</span></label>
+          </li>
+        </ul>
+      </div>
+      <div class="poll-footer">
+        <button type="submit">Vote</button>
+      </div>
+    </div>
+  </form>
         </div>
 
     </section>

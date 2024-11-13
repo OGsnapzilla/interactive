@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   body {
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: sans-serif;
     background-color: #eee;
     color: #111;
   }
@@ -12,21 +12,23 @@
     text-align: center;
     margin: 1.25rem 0 0.25rem 0;
   }
+
   .chart-container {
     position: relative;
     width: 45vw;
-    height: 22.5vw;
+    height: 16vw;
     margin: auto;
   }
   
   .poll {
-    background-color: #fff;
+    background-color: #ece0d8;
     color: #333;
-    width: 30vw;
+    width: 25vw;
     margin: 1.75rem auto 1rem auto;
-    border: 1px solid #ccc;
-    border-radius: 0.25rem;
+    border: 5px solid #000000;
+    border-radius: 0.70rem;
   }
+
   .poll-heading {
     padding: 1rem;
     border-bottom: 1px solid;
@@ -67,10 +69,10 @@
     text-align: center;
   }
   .poll-footer button {
-    background-color: #777;
-    color: #fff;
+    background-color: #7f5614;
+    color: #ffffff;
     padding: 0.5rem;
-    font-size: 1.25rem;
+    font-size: 1.20rem;
     font-weight: bold;
     border: none;
     outline: none;

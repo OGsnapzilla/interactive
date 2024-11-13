@@ -4,7 +4,7 @@
     {
       option: "Ja",
       votes: 11,
-      color: "rgb(255, 99, 132)"
+      color: "rgb(255, 199, 11)"
     },
     {
       option: "Nej",
@@ -14,7 +14,7 @@
     {
       option: "Måske",
       votes: 11,
-      color: "rgb(36, 36, 36)"
+      color: "rgb(87, 238, 112)"
     }
   ];
   
@@ -38,7 +38,7 @@
     return `rgba(${rgb.substring(rgb.indexOf('(')+1, rgb.length-1).split(',').join()}, ${alpha})`;
   }
   
-  Chart.defaults.font.family = '"Comic Sans MS", cursive, sans-serif';
+  Chart.defaults.font.family = '"sans-serif';
   
   
   const ctx = document.getElementById('chart').getContext('2d');
