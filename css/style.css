@@ -18,7 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -38%;
+  margin-top: -35%;
   overflow: hidden;
 }
 
@@ -43,6 +43,7 @@
 /*Styling af knap*/
 .btn {
   display: flex;
+  font-family: sans-serif;
   justify-content: center;
   align-items: center;
   background-color: #ECE8E5;
@@ -53,7 +54,7 @@
   border-radius: 20px;
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.133);
   position: absolute;
-  margin: -3.5rem 0 0 43rem;
+  margin: -6rem 0 0 43rem;
   border-style: none;
   color: black;
   outline: none;
