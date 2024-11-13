@@ -1,12 +1,12 @@
 # Integration af JSON-data 
 
-##Forklaring på opstilling af JSON-data i JSON-filen kropsIdealer.json
+## Forklaring på opstilling af JSON-data i JSON-filen kropsIdealer.json
 
 Vores JSON-data er skrevet i en JSON-fil, kropsIdealer.json. 
 
-I vores JSON-fil er det vigtigt at starte og slutte med kantede paranteser, [], fordi vi arbejder med en liste(array) af objekter. Det er samtidig med til at JSON strukturen kan være gyldig. 
+I vores JSON-fil er det vigtigt at starte og slutte med kantede paranteser, [], fordi vi arbejder med en liste(array) af objekter. Det er samtidig med til at JSON strukturen kan være gyldig (https://www.w3schools.com/js/js_json_arrays.asp). 
 
-Inde i vores array er hvert objekt omsluttet af {}, som indeholder key-value-pairs. 
+Inde i vores array er hvert objekt omsluttet af {}, som indeholder key-value-pairs (https://www.w3schools.com/js/js_json_objects.asp). 
 
 Gennemgående for vores JSON-data er, key="year", som er en streng der repræsenterer value. Value er også en streng, og altså det der står i "" efter "year": Det samme gør sig gældende for "description":
 
@@ -20,19 +20,19 @@ Vi har oprettet en seperat javascript-fil, jsonData1copy.js, hvori vi integrerer
 ```javascript 
 "use strict";
  ```
-Gør at vi følger en standard for JavaScript. 
+Gør at vi følger en standard for JavaScript (https://www.w3schools.com/js/js_strict.asp). 
 
 ```javascript 
 const container = document.getElementById("container");
 ```
-Henter HTML-elementet med ID'en "container" fra HTML-dokumentet timeline.html. 
+Gør at vi med DOM-manupulation, henter HTML-elementet med ID'en "container" fra HTML-dokumentet timeline.html (https://www.w3schools.com/js/js_htmldom_elements.asp). 
 
-Vi har givet variablen "container" en konstant, da "container" er et unikt ID i timeline.html, da kun et html-element må have denne ID. 
+Vi har givet variablen "container" en konstant, da "container" er et unikt ID i timeline.html, da kun et html-element må have denne ID (https://www.w3schools.com/js/js_const.asp). 
 
 ```javascript
 let currentIndex = 0; 
 ```
-Er en variabel med en startværdi på 0, og i dette tilfælde bruges den til at holde styr på en position i et array. Vi bruger let fordi variablen ændres. 
+Er en variabel med en startværdi på 0, og i dette tilfælde bruges den til at holde styr på en position i et array. Vi bruger let fordi variablen ændres (https://www.w3schools.com/js/js_let.asp). 
 
 ```javascript 
 let jsonData = [];
@@ -45,7 +45,7 @@ let foran variablen jsonData, gør at vi kan ændre i variablen.
 
 Ved at bruge fetch-metoden, kan vi hente data fra vores json-fil dynamisk (https://www.w3schools.com/js/js_api_fetch.asp). 
 
-Vi opretter en asynkron funktion:
+Vi opretter en asynkron funktion: (https://www.w3schools.com/js/js_async.asp)
 ```javascript 
 async function fetchData (){
     try {
@@ -62,19 +62,19 @@ async function fetchData (){
 ```
 
 Med en asynkron funktion har vi mulighed for at bruge await, som står skrevet på linje 52 i denne fil eller linje 10 i js-filen. 
-I vores tilfælde bruges await til at vente på at fetch()-operationen er færdig, før resten af koden bliver indlæst. Resultatet gemmes i variablen 'response'. 
+I vores tilfælde bruges await til at vente på at fetch()-operationen er færdig, før resten af koden bliver indlæst. Resultatet gemmes i variablen 'response' (https://www.w3schools.com/js/js_async.asp). 
 
 Er der en fejl, kommer der en fejl med HTTP-statuskode. 
 ```javascript
 jsonData = await response.json();
 ```
-konverterer svarer til JSON-format, og resultatet gemmes i variablen jsonData, som vi definerede på linje 5 i js-filen. 
+konverterer svaret til JSON-format, og resultatet gemmes i variablen jsonData, som vi definerede på linje 5 i js-filen. 
 
 Funktionen
 ```javascript 
 loadInitialContent();
 ```
-indlæser det første sæt indbold, der er baseret på de hentede data, og bruger vores variabel på linje 5 til at vise informationen på vores website. 
+indlæser det første sæt indbold, der er baseret på de hentede data, og bruger vores variabel på linje 5 i js-filen til at vise informationen på vores website. 
 
 Skulle der opstå fejl i under udførelsen af koden i try-blokken, udskrives der en fejlmedelselse til konsollen - se linje 16-17 i js-filen. 
 
@@ -106,7 +106,7 @@ element.className = `item item-${index+1}`;
 ```
 Gør at div-elementerne kan få sin unikke klasse. 
 
-Med JavaScript indsætter vi også indhold til vores div-elementer i HTML-filen. Det gør vi ved hjælp af:
+Med JavaScript og DOM-manupulation indsætter vi også indhold til vores div-elementer i HTML-filen (https://www.w3schools.com/jsref/prop_html_innerhtml.asp). Det gør vi ved hjælp af:
 ```javascript
 element.innerHTML = `<h2>${item.year}</h2><p>${item.description}</p>`;
 ```
@@ -139,7 +139,7 @@ container.appendChild(createItem(item, currentIndex));
 ```
 gør flere ting:
 1. `(createItem(item, currentIndex)) kalder på funktionen fra tidligere på linje 22 i js-filen, 
-2.  og med DOM-manipulation, opretter et barn til 'container'-elementet fra HTMl-filen. 
+2.  og med DOM-manipulation, oprettes et barn til 'container'-elementet fra HTMl-filen. 
 
 ```javascript
 curentIndex++;
@@ -164,7 +164,7 @@ Det betyder at når funktionen 'loadInitialContent' bliver kaldt på, indlæser 
 
 ### Tilføjelse af event-listener for scrolling
 
-Vi har tilføjet en event listener til 'container' elementet, som lytter efter scroll-begivenheder. 
+Vi har tilføjet en event listener til 'container' elementet, som lytter efter scroll-begivenheder (https://www.w3schools.com/js/js_htmldom_eventlistener.asp). 
 
 Denne lytter sættes op ved hjælp af:
 ```javascript 
@@ -176,10 +176,17 @@ Vi har skrevet en betingelse inde i event listeneren:
 ```javascript
 if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 300)
 ```
-Betingelsen tjekker om brugeren har scrollet næsten til enden af containeren. De 300 er en slags buffer, der gør, at nyt indhold bliver indlæst kort før man når helt til enden. Det betyder at hvis brugeren er tæt på enden, altså hvis betingelsen er sand, så kaldes:
+Betingelsen tjekker om brugeren har scrollet næsten til enden af containeren (w3schools.com/js/js_if_else.asp). De 300 er en slags buffer, der gør, at nyt indhold bliver indlæst kort før man når helt til enden. Det betyder at hvis brugeren er tæt på enden, altså hvis betingelsen er sand, så kaldes:
 ```javascript
 loadMoreContent();
 ```
+
+## Brug af AI
+(https://www.perplexity.ai/search/hvad-betyder-async-i-javascrip-bC3UH60uT6CeUKtyw7vt2A)
+
+(https://chatgpt.com/share/67344f53-c820-8009-9622-9b49ca4f4d05)
+
+
 
 
 
