@@ -135,14 +135,16 @@ main {
 
 .item {
     display: inline-block;
-    width: 300px;
+    width: 500px;
     height: 200px;
     margin-right: 100px;
-    background-color: #f0f0f0;
+    background-color: #f0f0f058;
+    border-radius: 20px;
     vertical-align: top;
     position: absolute;
     margin-left: 15rem;
     margin-top: -12rem;
+    padding: 5px;
 }
 
 /*Styling text from jsonData*/
