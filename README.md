@@ -182,6 +182,8 @@ loadMoreContent();
 ```
 
 ## Brug af AI
+Vi har brugt ChatGPT og Perplexity til at forklare og forstå vores kode:
+
 (https://www.perplexity.ai/search/hvad-betyder-async-i-javascrip-bC3UH60uT6CeUKtyw7vt2A)
 
 (https://chatgpt.com/share/67344f53-c820-8009-9622-9b49ca4f4d05)
