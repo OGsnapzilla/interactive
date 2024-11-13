@@ -1,3 +1,5 @@
+"use strict";
+
 document.addEventListener("DOMContentLoaded", function () {
     const walkingGirl = document.getElementById("walking");
     const standingGirl = document.getElementById("standing");
@@ -39,3 +41,5 @@ document.addEventListener("DOMContentLoaded", function () {
     // Ensure the animated girl scrolls horizontally without exceeding the main container
     animatedGirl.style.left = `${Math.min(scrollLeft + 50, 15707 - animatedGirl.offsetWidth)}px`;
 });
+
+

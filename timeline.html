@@ -19,6 +19,38 @@
         <img src="img/baggrund.webp" alt="Timeline Background" class="background-image">
     </section>
 
+     <!--img for icon (placed under girl)-->
+    <img id="information-icon" src="img/ask.png" alt="i for information" onclick="showPopup()">
+
+      <!--pop-up-->
+      <section id="pop-up-question">
+        <div class="pop-up-information">
+            <button class="close-btn-popup" onclick="hidePopup()">X</button>
+            <p>ville du fjerne øyebryn, øyevipper og plukket hårfeste for å være vakker?</p>
+
+            <div class="question-buttons">
+            <button class="question-btn">Ja</button>
+            <button class="question-btn">Nei</button>
+            </div>
+        </div>
+
+    </section>
+
+  <script>
+    function showPopup() {
+        const popup = document.getElementById("pop-up-question");
+        popup.style.display = "block";
+    }
+
+    function hidePopup() {
+        const popup = document.getElementById("pop-up-question");
+        popup.style.display = "none";
+    }
+     </script>
+    
+
+
+
     <!-- Animated girl container (absolute positioning to float over images) -->
     <section class="animated-girl">
         <img id="walking" src="img/walkingGirl.gif" alt="Walking Girl" class="girl-image">
@@ -36,10 +68,16 @@
         <button id="audio-btn">Sluk musik</button>
     </section>
 
+    <!--Tilbage knap-->
+    <section>
+        <a href="index.html" id="tilbage-btn">Tilbage til startside</a>
+    </section>
+
     <!-- Insert a container to JSON-data content -->
     <article id="container"></article>
 
+
+
     </main>
-    
 </body>
 </html>
