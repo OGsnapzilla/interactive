@@ -16,5 +16,21 @@ audioBtn.addEventListener("click", () =>{
     }
 });
 
+//henter knappene og popup
+const popup = document.getElementById('pop-up-question');
+const openPopupBtn = document.getElementById('open-btn');
+const closePopupBtn = document.getElementById('close-btn-popup');
+
+//klikk gjør at popup blir synlig eller gjemt
+openPopupBtn.addEventListener('click', () => {
+    popup.classList.remove('hidden');
+    popup.classList.add('visible');
+
+});
+
+closePopupBtn.addEventListener('click', () => {
+    popup.classList.remove('visible');
+    popup.classList.add('hidden');
+});
 
 

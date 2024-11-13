@@ -214,10 +214,18 @@ main {
 
 }
 
+#pop-up-question.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
 /*styling pop-up*/
 
 #pop-up-question {
-    display:none; /*skjuler popup*/
+    display: none;
     position: absolute;
     left: 500px;
     background-color: #ece0d8;
@@ -227,9 +235,24 @@ main {
     margin: 20px;
     max-width: 80%;
     padding: 10px;
+    z-index: 2;
 }
 
-
+#open-btn {
+    position: absolute;
+    bottom: 350px; 
+    right: 700px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 90px;
+    background-color: #000;
+    color: #ece0d8;
+    border-radius: 10px;
+    z-index: 1;
+}
 
 .pop-up-information {
     border: 6px solid #000;
@@ -260,7 +283,6 @@ main {
     gap: 40px;
     
 }
-
 
 .close-btn-popup {
     border: none;
